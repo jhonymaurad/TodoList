@@ -11,7 +11,6 @@ class Todos extends Component {
         markComplete={this.props.markComplete}
         handleDelete={this.props.handleDelete}/>
     ));
-
   }
 }
 

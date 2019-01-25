@@ -5,6 +5,7 @@ export default class AddToDo extends Component {
   state ={
     title: ''
   }
+
   onChange = (e) => {
     this.setState(
       {
@@ -12,11 +13,13 @@ export default class AddToDo extends Component {
       }
     );
   }
+
   onSubmit = (e) =>{
     e.preventDefault();
     this.props.addTodo(this.state.title);
     this.setState({ title: '' });
   }
+
   render() {
     return(
       <form
@@ -32,7 +35,6 @@ export default class AddToDo extends Component {
         <input type='submit' value= 'submit' className= 'btn' style={{flex: '1'}}/>
       </form>
     )
-
   }
 }
 AddToDo.propTypes = {

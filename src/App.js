@@ -9,7 +9,6 @@ import './App.css';
 import axios from 'axios';
 
 class App extends Component {
-
   state = {
     todos: []
   }
@@ -18,6 +17,7 @@ class App extends Component {
     axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10')
     .then(res => this.setState( { todos: res.data}))
   }
+
   markComplete = (id) =>{
     this.setState({ todos: this.state.todos.map(todo => {
       if(todo.id === id){
@@ -39,7 +39,6 @@ class App extends Component {
       completed: false
     })
     .then(res => this.setState({ todos: [...this.state.todos, res.data] }));
-
   }
   render() {
     return (
@@ -56,14 +55,11 @@ class App extends Component {
                   handleDelete={this.handleDelete}/>
               </React.Fragment>
             )}/>
-
             <Route path= '/about' component={About}/>
-
           </div>
         </div>
       </Router>
     );
   }
 }
-
 export default App;

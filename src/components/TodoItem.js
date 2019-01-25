@@ -12,7 +12,6 @@ export default class TodoItem extends Component {
     }
   }
 
-
   render() {
     const { id, title } = this.props.todo;
     return(
@@ -24,7 +23,6 @@ export default class TodoItem extends Component {
         </p>
       </div>
     )
-
   }
 }
 
